@@ -12,6 +12,9 @@ export default {
 </script>
 
 <style>
+@import '../node_modules/bulma/bulma.sass';
+@import 'mq'
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
