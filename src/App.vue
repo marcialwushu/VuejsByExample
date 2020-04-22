@@ -19,6 +19,17 @@
           <router-link to="faq" class="nav-item r-item">About</router-link>
           <router-link to="faq" class="nav-item r-item">FAQ</router-link>
 
+          <div class="nav-item">
+            <p class="control">
+              <a class="button is-primary is-outlined">
+                <span class="icon">
+                  <i class="fa fa-download"></i>
+                </span>
+                <span>Join Now</span>
+              </a>
+            </p>
+          </div>
+
         </div>
       </div>
     </div>
@@ -32,16 +43,16 @@ export default {
 }
 </script>
 
-<style>
-@import '../node_modules/bulma/bulma.sass';
+<style lang="sass">
+@import '../node_modules/bulma/bulma.sass'
 @import 'mq'
 
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+#app
+  font-family: 'Avenir', Helvetica, Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  text-align: center
+  color: #2c3e50
+  margin-top: 60px
+
 </style>
