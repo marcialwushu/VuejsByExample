@@ -1,38 +1,42 @@
 <template>
   <div id="app">
-    <div class="nav has-shadow">
-      <div class="container">
-        <div class="nav-left">
-          <a class="nav-item">MyCopmany</a>
-        </div>
+    <nav class="navbar is-transparent">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">MyCompany</a>
+    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
 
-        <span class="nav-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
+  <div id="navbarExampleTransparentExample" class="navbar-menu">
+    <div class="navbar-start">
+      <div class="navbar-item has-dropdown is-hoverable"></div>
+    </div>
 
-        <div class="nav-right nav-menu">
+    <div class="navbar-end">
 
-          <router-link to="/" class="nav-item r-item">Home</router-link>
-          <router-link to="faq" class="nav-item r-item">Feature</router-link>
-          <router-link to="faq" class="nav-item r-item">About</router-link>
-          <router-link to="faq" class="nav-item r-item">FAQ</router-link>
+    <router-link to="/" class="navbar-item">Home</router-link>
+    <router-link to="/" class="navbar-item">Feature</router-link>
+    <router-link to="/" class="navbar-item">About</router-link>
+    <router-link to="/" class="navbar-item">FAQ</router-link>
+      <div class="navbar-item">
+        <div class="field is-grouped">
 
-          <div class="nav-item">
-            <p class="control">
-              <a class="button is-primary is-outlined">
-                <span class="icon">
-                  <i class="fa fa-download"></i>
-                </span>
-                <span>Join Now</span>
-              </a>
-            </p>
-          </div>
-
+          <p class="control">
+            <a class="button is-primary is-outlined" href="">
+              <span class="icon">
+                <i class="fas fa-download"></i>
+              </span>
+              <span>Join Now</span>
+            </a>
+          </p>
         </div>
       </div>
     </div>
+  </div>
+</nav>
     <router-view/>
   </div>
 </template>
@@ -47,12 +51,6 @@ export default {
 @import '../node_modules/bulma/bulma.sass'
 @import 'mq'
 
-#app
-  font-family: 'Avenir', Helvetica, Arial, sans-serif
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
-  text-align: center
-  color: #2c3e50
-  margin-top: 60px
+
 
 </style>
