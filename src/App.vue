@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <nav class="navbar is-transparent">
+  <nav class="navbar is-transparent">
   <div class="navbar-brand">
     <a class="navbar-item" href="https://bulma.io">MyCompany</a>
     <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
@@ -51,6 +51,20 @@ export default {
 @import '../node_modules/bulma/bulma.sass'
 @import 'mq'
 
+.navbar
+	background-color: #383838
+	a:hover
+		color:gray
+.navbar-brand a
+	color:#fff
+	font-weight:bold
+a.navbar-item
+	color:#C1C1C1
+	padding: 0.5rem 1.75rem
+	+mobile
+		color:gray
+		&:hover
+			background-color: #F1F1F1
 
 
 </style>
