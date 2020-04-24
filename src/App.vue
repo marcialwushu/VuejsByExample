@@ -3,14 +3,14 @@
   <nav class="navbar is-transparent">
   <div class="navbar-brand">
     <a class="navbar-item" href="https://bulma.io">MyCompany</a>
-    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+    <div class="navbar-burger burger" v-on:click="showNav" v-bind:class="{ 'is-active': isActive }">
       <span></span>
       <span></span>
       <span></span>
     </div>
   </div>
 
-  <div id="navbarExampleTransparentExample" class="navbar-menu">
+  <div id="navbarExampleTransparentExample" class="navbar-menu" v-bind:class="{ 'is-active': isActive }">
     <div class="navbar-start">
       <div class="navbar-item has-dropdown is-hoverable"></div>
     </div>
@@ -43,7 +43,17 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data: function() {
+    return {
+      isActive: false
+    }
+  },
+  methods: {
+    showNav: function() {
+      this.isActive = !this.isActive;
+    }
+  },
 }
 </script>
 
@@ -55,16 +65,21 @@ export default {
 	background-color: #383838
 	a:hover
 		color:gray
-.navbar-brand a
-	color:#fff
-	font-weight:bold
-a.navbar-item
-	color:#C1C1C1
-	padding: 0.5rem 1.75rem
-	+mobile
-		color:gray
-		&:hover
-			background-color: #F1F1F1
+.navbar-brand
+  a.navbar-item
+	  color:#fff
+	  font-weight:bold
+.navbar-end
+  .navbar-item
+	  color:#C1C1C1
+	  padding: 0.5rem 1.75rem
+	  +mobile
+		  color:gray
+		  &:hover
+			  background-color: #F1F1F1
+
+.navbar-burger span
+  background-color: #C1C1C1
 
 
 </style>
