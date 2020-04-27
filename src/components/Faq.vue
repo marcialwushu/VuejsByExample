@@ -5,8 +5,7 @@
           <h1 class="title">FAQ</h1>
           <h2 class="subtitle is-4">Lorum ipsum and all of that jazz</h2>
 
-
-          <div class="columns" v-if="faqs && faqs.lenght">
+          <div class="columns" v-if="faqs">
             <div class="column is-one-third" v-for="faq of faqs">
               <div class="card">
                 <div class="card-content">
@@ -34,7 +33,7 @@ export default {
   created() {
     axios.get('https://jsonplaceholder.typicode.com/posts')
       .then(response => {
-        this.faqs = response.data.slice(0,10);
+        this.faqs = response.data.slice(0, 10)
       })
       .catch(e => {
         this.errors.push(e)
