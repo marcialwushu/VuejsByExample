@@ -13,3 +13,6 @@ yarn-error.log*
 *.njsproj
 *.sln
 .theia/
+report.20200427.202126.3904.0.001.json
+report.20200427.202127.2728.0.001.json
+vue.config.js
